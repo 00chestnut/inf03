@@ -37,7 +37,7 @@ $query2 = 'SELECT nazwa, opis, cena FROM nagrody ORDER BY RAND() LIMIT 5;';
                 <?php
                 $counter = 1;
                 $result = mysqli_query($conn, $query2);
-                while ($row = mysqli_fetch_array($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
                     echo '<tr>';
                     echo '<td>' . $counter++ . '</td>';
                     echo '<td>' . $row['nazwa'] . '</td>';
