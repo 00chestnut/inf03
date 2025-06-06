@@ -1,0 +1,43 @@
+body{
+background-size: 100% 100vh;
+font-family: Verdana;
+text-align: center;
+padding-top: 0;
+padding-bottom: 0;
+padding-right: 3%;
+padding-left: 3%;
+}
+
+header{
+    background-color:#FDFAAA;
+    color:#5BBB77;
+    padding: 10px;
+    text-shadow: 5px 5px 10px black ;
+}
+
+section{
+    float: left;
+    background-color:#FFA6A6 ;
+    width: 79%;
+    height: 600px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 5px 6px 10x black;
+}
+
+aside{
+    float: right;
+    background-image:linear-gradient(#FDFAAA, #5BBB77);
+    width: 20%;
+    height: 630px;
+}
+
+footer{
+    background-color: #5BBB77;
+    color:#FFF555;
+    font-size:120%;
+    font-weight: bold;
+    padding: 15px;
+    /* margin-top: auto; */
+}
+
