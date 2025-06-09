@@ -48,20 +48,11 @@
     </ul>
 
     <script>
-      function addTask() {
-        let text = document.getElementById("taskInput").value;
-        if (text === "") return;
-
-        let li = document.createElement("li"); 
-        li.innerHTML =
-          text + ' <button onclick="markDone(this)">Wykonane</button>'; 
-        document.getElementById("taskList").appendChild(li); 
-
-        document.getElementById("taskInput").value = "";
-      }
-
-      function markDone(button) {
-        button.parentElement.style = "text-decoration: line-through;"; 
+      function addTask(){
+      let text = document.getElementById("taskInput").value;
+      let li = document.createElement("li");
+      li.innerHTML = text + '<button onclick="markDone(this)">Wykonane</button>';
+      document.getElementById("taskList").appendChild(li)
       }
     </script>
   </body>
