@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/transformacje.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/transformacje.css" />
     <title>Efekty obrazu</title>
-</head>
-<body>
-    
-    <script>
+  </head>
+  <body>
+    <img src="../inf03/transformacje/pszczola.jpg" id="obrazek" />
+    <label for="dih" label="wciskaj">
+    <input type="checkbox" id="dih" onchange="filtruj()"/>
+    wciskaj
+    </label>
+    <img src="../inf03/transformacje/pomarancza.jpg" id="pomarancza" />
+    <label for="dih" label="wciskaj">
+    <input type="range" id="vad" onchange="fj()"/>
+    naciągaj
+    </label>
+  <script>
+    function fj(){
+        let vadishek = document.getElementById("vad");
+        let percentage = vadishek.value;
+        pomarancza.style.filter = "grayscale(" + percentage + "%)";
+        pomarancza.setAttribute("width","50%");
+    }
+    function filtruj() {
+      let obrazek = document.getElementById("obrazek");
+      let checkbox = document.getElementById("dih");
 
-    </script>
-</body>
+      if (checkbox.checked) {
+        obrazek.style.filter = "sepia(100%)";
+      } else {
+        obrazek.style.filter = "none";
+      }
+    }
+  </script>
+  </body>
 </html>
